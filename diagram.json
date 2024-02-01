@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Mary Loftus",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -135.7, "left": -115.4, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -90, "left": 109.4, "attrs": { "color": "red" } },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -135.7, "left": -201.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "uno:7", "green", [ "v0" ] ],
+    [ "uno:7", "uno:6", "green", [ "v0" ] ],
+    [ "pot2:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot2:SIG", "uno:A1", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
